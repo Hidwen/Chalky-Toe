@@ -7,5 +7,18 @@
     --chalk-blue: #7ec8e3;
     --chalk-coral: #f3a35c;
     --chalk-yellow: #ecd07a;
-    --chalk-pink: 
+    --chalk-pink: #e58ba0;
+    --dust: rgba(244, 239, 225, 0.5);
+    --shadow-doft: rgba(0,0,0,0.45);
+}
+
+* {box-sizing: border-box;}
+html,body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: radial-gradient(ellipse at top, var(--board-dark-2),var(--board-dark) 70%)
+    color: var(--chalk-white);
+    font-family: 'kalam', cursive;
+    overflow-x: hidden;
 }

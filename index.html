@@ -49,8 +49,34 @@
         </div>
         <button class="black-link" data-back="screen-difficulty">&larr; back</button>
     </section>
-    
-
+    <section class="screen" id="screen-game">
+        <div class="game-header">
+            <button class="icon-btn" id="menuBtn" title="back to menu" aria-label="back to menu">&larr;</button>
+            <div class="scoreboard">
+                <div class="score-card score-x">
+                    <span class="score-label" id="labelX">X</span>
+                    <span class="score-num" id="scoreX">0</span>
+                </div>
+                <div class="score-card score-draw">
+                    <span class="score-label">Draws</span>
+                    <span class="score-num" id="scoreDraw">0</span>
+            </div>
+                <div class="score-card score-o">
+                    <span class="score-label" id="labelO">O</span>
+                    <span class="score-num" id="scoreO">0</span>
+                </div>
+        </div>
+        <button class="icon-btn" id="resetScoreBtn" title="reset scores" aria-label="reset scores">&#8635;</button>
+    </div>
+    <p class="turn-indicator" id="turnIndicator">X's turn</p>
+    <div class="board-frame" id="boardFrame">
+        <div class="board" id="board">
+            </div>
+        </div>
+        <button class="chalk-btn-new-round-btn" id="newRoundBtn">New Round</button>
+    </section>
+    <canvas id="confettiCanvas"></canvas>
+    <div class="result-banner" id="resultBanner"><span id="resultText"></span></div>
+        <script src="script.js"></script>
 </body>
-
 </html>

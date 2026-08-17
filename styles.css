@@ -17,8 +17,21 @@ html,body{
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background: radial-gradient(ellipse at top, var(--board-dark-2),var(--board-dark) 70%)
+    background: radial-gradient(ellipse at top, var(--board-dark-2),var(--board-dark) 70%);
     color: var(--chalk-white);
     font-family: 'kalam', cursive;
     overflow-x: hidden;
 }
+ /*To make the background faint texture */
+ body::before{
+    content:"";
+    position: fixed;
+    inset: 0;
+    background-image:
+     radialgradient(rgba(255,255,255,0.025) 1px, transparent 1px);
+     radialgradient(rgba(255,255,255,0.02) 1px, transparent 1px);
+     background-size: 3px 3px, 7px 7px;
+     background-position: 0 0, 2px 4px;
+     pointer-events: none;
+     z-index: 0;
+ }

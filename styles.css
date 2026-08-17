@@ -149,3 +149,22 @@ html,body{
 .diff-btn[data-diff="medium"] {border-color: var(--chalk-yellow);}
 .diff-btn[data-diff="hard"] {border-color: var(--chalk-pink);}
 .symbol-btn{ font-family: 'Bungee', cursive; font-size: 2.4rem; min-width: 120px; align-items: center;}
+.symbol-btn[data-symbol="X"] {border-color: var(--chalk-blue); color: var(--chalk-blue);}
+.symbol-btn[data-symbol="O"] {border-color: var(--chalk-coral); color: var(--chalk-coral);}
+
+.section-heading{font-size: clamp(1.8rem, 5vw, 2.4rem); margin-bottom: 30px;}
+.back-link{
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 50%;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.15s ease, background 0.15s ease;
+    flex-shrink: 0;
+}

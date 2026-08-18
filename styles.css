@@ -153,6 +153,7 @@ html,body{
 .symbol-btn[data-symbol="O"] {border-color: var(--chalk-coral); color: var(--chalk-coral);}
 
 .section-heading{font-size: clamp(1.8rem, 5vw, 2.4rem); margin-bottom: 30px;}
+#screen-game {padding-top: 26px; justify-content: flex-start; gap:4px;}
 .game-header{
     width: 100%;
     max-width: 480px;
@@ -175,4 +176,62 @@ html,body{
     justify-content: center;
     transition: transform 0.15s ease, background 0.15s ease;
     flex-shrink: 0;
+}
+.icon-btn:hover{ background: rgba(244, 239, 225, 0.15); transform: rotate(-12deg);}
+.icon-btn:focus-visible{ outline: 2px dashed var(--chalk-yellow); outline-offset: 3px;}
+.back-link{
+    margin-top: 34px;
+    background: none;
+    border: none;
+    color: var(--chalk-white);
+    opacity: 0.65;
+    font-family: 'Caveat', cursive;
+    font-size: 1.3rem;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+.back-link:hover{ opacity: 1;}
+/*Scoreboard styles */
+.scoreboard{
+    display: flex;
+    gap: 10px;
+    flex: 1;
+    justify-content: center;
+}
+.score-card{
+    background: rgba(244, 239, 225, 0.05);
+    border: 2px solid rgba(244, 239, 225, 0.25);
+    border-radius: 10px;
+    padding: 6px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 62px;
+}
+.score-card.score-x{border-color: var(--chalk-blue);}
+.score-card.score-o{border-color: var(--chalk-coral);}
+.score-label{ font-family: 'Caveat', cursive; font-size: 1rem; opacity: 0.8;}
+.score-num{ font-family: 'Bungee', cursive; font-size: 1.3rem;}
+.turn-indicator{
+    font-family: 'Caveat', cursive;
+    font-size: 1.4rem;
+    color: var(--chalk-yellow);
+    margin: 6px 0 18px;
+    min-height: 1.4rem;
+}
+.board-frame{
+    background: linear-gradient(160deg, var(--wood-frame), var(--wood-frame-dark));
+    padding: 16px;
+    border-radius: 18px;
+    box-shadow: 0 14px 34px var(--shadow-soft), inset 0 0 0 4px rgba(0,0,0,0,15);
+}
+.board{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(80px,100px));
+    grid-template-rows: repeat(3, minmax(80px,100px));
+    gap: 6px;
+    background: rgba(0,0,0,0.25);
+    border-radius: 8px;
+    padding: 6px;
 }

@@ -153,14 +153,22 @@ html,body{
 .symbol-btn[data-symbol="O"] {border-color: var(--chalk-coral); color: var(--chalk-coral);}
 
 .section-heading{font-size: clamp(1.8rem, 5vw, 2.4rem); margin-bottom: 30px;}
-.back-link{
+.game-header{
     width: 100%;
     max-width: 480px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 10px;
     margin-bottom: 50%;
+}
+.icon-btn{
+    background: rgba(244, 239, 225, 0.06);
+    border: 2px solid rgba(244, 239, 225, 0.3);
+    color: var(--chalk-white);
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
     font-size: 1.1rem;
     display: flex;
     align-items: center;

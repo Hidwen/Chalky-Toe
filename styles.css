@@ -19,7 +19,7 @@ html,body{
     min-height: 100vh;
     background: radial-gradient(ellipse at top, var(--board-dark-2),var(--board-dark) 70%);
     color: var(--chalk-white);
-    font-family: 'kalam', cursive;
+    font-family: 'Kalam', cursive;
     overflow-x: hidden;
 }
  /*To make the background faint texture */

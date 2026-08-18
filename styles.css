@@ -284,5 +284,48 @@ html,body{
 @keyframes shakeIt{
     0%, 100% { transform: translateX(0);}
     20%     {transform: translateX(-10px) rotate(-1deg);}
+    40% {transform: translateX(9px) rotate(1deg);}
+    60% {transform: translateX(-6px);}
+    80% {transform: translateX(5px);}
 
+}
+.flash-red{ animation: flashRed .6s ease;}
+@keyframes flashRed{
+    0%,100% {box-shadow: 0 14px 34px var(--shadow-soft), inset 0 0 0 4px rgba(0,0,0,0,.15);}
+    30%{box-shadow: 0 0 0 6px rgba(229,139,160,.7), inset 0 0 0 4px rgba(0,0,0,0,.15);}
+}
+.result-banner{
+    position: fixed;
+    z-index: 10;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%) scale(0);
+    background: var(--board-dark-2);
+    border: 3px solid var(--chalk-yellow);
+    border-radius: 16px;
+    padding: 22px 40px;
+    font-family: 'Bungee', cursive;
+    font-size: clamp(1.3rem, 5vw, 2rem);
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0,0,0,.6);
+    opacity: 0;
+    transition: transform .35s cubic-bezier(.34,1.56,.64,1), opacity .3 ease;
+}
+.result-banner.show{transform: translate(-50%,-50%) scale(1); opacity:1;}
+#confettiCanvas{
+    position:fixed;
+    inset:0;
+    z-index:9;
+    pointer-events:none;
+}
+@media (max-width: 480px){
+    .board{
+        grid-template-columns: repeat(3, minmax(66px,88px));
+        grid-template-rows: repeat(3, minmax(66px,88px));
+    }
+    .chalk-brn{ min-width: 170px; padding: 14px 20px;}
+    .game-header{ flex-wrap: wrap;}
+}
+@media (prefers-reduced-motion: reduce){
+    * {animation-duration: .001s !important; transition-duration: .001s !important;}
 }
